@@ -9,7 +9,9 @@
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-blue: #73aace;
+  --color-sky-blue: #73aace;
+  --color-blue: #1b48ab;
+  --color-dark-blue: #002171;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -93,7 +95,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -119,7 +121,7 @@ p {
   border: 1px solid var(--color-dark-white);
 }
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-blue);
 }
 
 .navbar__toggle-btn {
@@ -184,8 +186,8 @@ p {
   line-height: 170px;
   font-size: 70px;
   margin: auto;
-  color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  color: var(--color-sky-blue);
+  border: 1px solid var(--color-sky-blue);
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -200,7 +202,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-blue);
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -302,7 +304,7 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   color: var(--color-white);
 }
 
@@ -424,12 +426,12 @@ p {
   color: var(--color-light-grey);
 }
 .testimonial__speech-bubble a {
-  color: var(--color-pink);
+  color: var(--color-blue);
 }
 
 /* Contact */
 #contact {
-  background-color: pink;
+  background-color: var(--color-dark-blue);
 }
 
 .contact__title,
