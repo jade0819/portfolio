@@ -1,13 +1,10 @@
 {
-    "editor.tokenColorCustomizations": {
-
-        "comments": "#ffc2c2"
-
-    },
-    "launch": {
-        
-
-        "configurations": [],
-        "compounds": []
-    }
+  "editor.tokenColorCustomizations": {
+    "comments": "#ffc2c2"
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "liveServer.settings.port": 5502
 }
