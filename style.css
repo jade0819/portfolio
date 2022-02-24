@@ -152,10 +152,6 @@ p {
   text-align: center;
 }
 
-#hoem.home--opacity {
-  opacity: 0.3;
-}
-
 .home__avatar {
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
@@ -469,6 +465,26 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+/* Scroll  */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  z-index: 1;
+  visibility: hidden;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  visibility: visible;
 }
 
 /* For below 768px screen width */
