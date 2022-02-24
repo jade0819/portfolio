@@ -152,6 +152,10 @@ p {
   text-align: center;
 }
 
+#hoem.home--opacity {
+  opacity: 0.3;
+}
+
 .home__avatar {
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
