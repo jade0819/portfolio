@@ -410,7 +410,7 @@ p {
   left: 50%;
   width: 50px;
   /* margin-left: -12px; */
-  transform: translateX(-50%)
+  transform: translateX(-50%);
   margin-top: 8px;
   color: var(--color-white);
   background-color: var(--color-dark-white);
