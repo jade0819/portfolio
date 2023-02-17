@@ -1,3 +1,25 @@
+/* Font */
+@font-face {
+    font-family: 'CookieRun';
+    font-weight: 400;
+    src: local('CookieRun Regular'),
+        url('./assets/CookieRunFont_OTF/CookieRun-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    font-weight: 600;
+    src: local('CookieRun Bold'),
+        url('./assets/CookieRunFont_OTF/CookieRun-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CookieRun';
+    font-weight: 700;
+    src: local('CookieRun black'),
+        url('./assets/CookieRunFont_OTF/CookieRun-Black.otf') format('opentype');
+}
+
 /* Global */
 :root {
     /* Color */
@@ -10,13 +32,18 @@
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-sky-blue: #73aace;
-    --color-light-blue: #5c73dd;
-    --color-blue: #1b48ab;
-    --color-dark-blue: #00227b;
-    --color-deep-dark-blue: #002171;
-    --color-yellow: #fff7d1;
+    --color-blue-100: #5c73dd;
+    --color-blue-300: #1b48ab;
+    --color-blue-400: #18409A;
+    --color-blue-500: #153580;
+    --color-blue-600: #253C78;
+    --color-blue-900: #00227b;
+    --color-light-yellow: #fff7d1;
+    --color-yellow: #FFDE59;
+    --color-dark-yellow: #f7c500;
     --color-orange: #feb546;
-    --color-black: #000000;
+    --color-light-black: #2C384A;
+    --color-black: #1F2937;
 
     /* Font size */
     --font-large: 48px;
@@ -43,11 +70,8 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'CookieRun', sans-serif;
     margin: 0;
-    --width: 232px;
-    --height: 312px;
-    --width-negative: -232px;
 }
 
 a {
@@ -75,29 +99,39 @@ button {
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-black);
+    color: var(--color-blue-900);
     margin: 16px 0px;
 }
 
 h2 {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
+    color: var(--color-light-blackk);
     margin: 8px 0px;
 }
 
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
+    color: var(--color-light-black);
     margin: 8px 0px;
 }
 
 p {
-    font-size: var(--font-regular);
+    font-size: var(--font-small);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
+    color: var(--color-light-black);
     margin: 4px 0px;
+}
+
+div {
+    font-weight: var(--weight-regular);
+    color: var(--color-light-black);
+}
+
+span {
+    font-weight: var(--weight-regular);
+    color: var(--color-white);
 }
 
 /* Navbar */
@@ -113,15 +147,9 @@ p {
 
 #navbar.nav-dark {
     transition: all var(--animation--duration) ease-in-out;
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-blue-400);
 }
 
-/* .navbar__logo {
-    font-size: var(--font-medium);
-    font-weight: var(--weight-semi-bold);
-    margin-left: 12px;
-    color: var(--color-white);
-} */
 .navbar__logo {
     display: flex;
     align-items: center;
@@ -156,12 +184,19 @@ p {
 }
 
 .navbar__menu__item {
-    padding: 8px 24px;
+    padding: 8px 18px;
+    margin: 0 4px;
     border: 1px solid transparent;
 }
 
 .navbar__menu__item.active {
     border: 1px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover {
+    border-color: var(--color-white);
+    background-color: var(--color-blue-500);
     border-radius: var(--size-border-radius);
 }
 
@@ -211,6 +246,12 @@ p {
     border-radius: var(--size-border-radius);
 }
 
+.home__contact:hover {
+    border-color: var(--color-white);
+    background-color: var(--color-blue-400);
+    border-radius: var(--size-border-radius);
+}
+
 /* Section */
 .section__container {
     max-width: 1200px;
@@ -239,16 +280,17 @@ section {
     height: 170px;
     line-height: 170px;
     font-size: 70px;
-    color: var(--color-sky-blue);
+    /* color: var(--color-sky-blue); */
+    color: var(--color-blue-100);
     margin: auto;
     margin-bottom: 16px;
-    border: 1px solid var(--color-sky-blue);
+    border: 2px solid var(--color-blue-100);
     border-radius: 50%;
 
 }
 
 .major__icon:hover i {
-    color: var(--color-blue);
+    color: var(--color-blue-400);
     transform: rotate(-30deg) scale(1.1);
     transition: all var(--animation--duration) ease-in-out;
 }
@@ -280,6 +322,7 @@ section {
 
 /* Skills */
 #skills {
+    /* background-color: var(--color-light-yellow); */
     background-color: var(--color-yellow);
 }
 
@@ -308,7 +351,6 @@ section {
 .skill__description {
     display: flex;
     justify-content: space-between;
-
     color: var(--color-white);
 }
 
@@ -365,7 +407,9 @@ section {
     height: 24px;
     line-height: 24px;
     font-size: var(--font-small);
+    font-weight: var(--weight-bold);
     color: var(--color-white);
+    /* color: var(--color-blue-900); */
     text-align: center;
     background-color: var(--color-orange);
     border-radius: 50%;
@@ -375,12 +419,12 @@ section {
 .category__btn.selected,
 .category__btn:hover {
     color: var(--color-white);
-    background-color: var(--color-blue);
+    background-color: var(--color-blue-400);
 }
 
 .category__btn.selected>.category__count,
 .category__btn:hover>.category__count {
-    top: 3px;
+    top: 5px;
     opacity: 1;
 }
 
@@ -458,7 +502,7 @@ section {
 
 /* Contact */
 #contact {
-    background-color: var(--color-blue);
+    background-color: var(--color-blue-400);
 }
 
 .contact__title,
@@ -489,7 +533,7 @@ section {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-blue-500);
     transition: all var(--animation--duration) ease-in;
     opacity: 0;
     pointer-events: none;
@@ -523,7 +567,7 @@ section {
     }
 
     #navbar.open-dark {
-        background-color: var(--color-dark-blue);
+        background-color: var(--color-blue-400);
     }
 
     .navbar__logo {
@@ -546,7 +590,7 @@ section {
 
     .open {
         display: block;
-        background-color: var(--color-dark-blue);
+        background-color: var(--color-blue-400);
     }
 
     .navbar__menu__item {
